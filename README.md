@@ -2,6 +2,8 @@
 
 Small maintenance scripts for diagnosing and scrubbing oversized or invalid media payloads in local Codex rollout JSONL files.
 
+[![tests](https://github.com/gaoqi125/codex-media-hygiene/actions/workflows/tests.yml/badge.svg)](https://github.com/gaoqi125/codex-media-hygiene/actions/workflows/tests.yml)
+
 The tools are conservative by default:
 
 - `codex-health-check.sh` is read-only.
@@ -56,3 +58,5 @@ The tests create temporary Codex homes and do not touch your real `$HOME/.codex`
 ## Safety Notes
 
 Do not run confirmed cleanup without first reviewing dry-run output. The cleanup path rewrites rollout JSONL files in place after creating backups under `$CODEX_HOME/cleanup_backups`.
+
+See [SECURITY.md](SECURITY.md) and [SUPPORT.md](SUPPORT.md) before sharing diagnostics from real rollout files.
